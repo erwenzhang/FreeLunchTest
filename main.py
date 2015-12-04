@@ -20,7 +20,9 @@ import urllib
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
-from google.appengine.ext import db
+from google.appengine.ext import blobstore
+from google.appengine.ext.webapp import blobstore_handlers
+from google.appengine.api import images
 
 
 administrator1 = users.User("wenwenzhang1001@gmail.com")
@@ -40,7 +42,7 @@ class Event(ndb.Model):
     linkage = ndb.StringProperty()
 
 
-class crowdworker(ndb.Model):
+class Crowdworker(ndb.Model):
     ID = ndb.StringProperty()
     name = ndb.StringProperty()
     rated_times = ndb.IntegerProperty()
@@ -57,11 +59,19 @@ class MainHandler(webapp2.RequestHandler):
 class ViewAllEvents(webapp2.RequestHandler):
     def get(self):
 
+
 class ViewOneEvent(webapp2.RequestHandler):
     def get(self):
 
 class GiveFeedback(webapp2.RequestHandler):
     def get(self):
+
+class AddEvent(webapp2.RequestHandler):
+    def get(self):
+
+class DeleteEvent(webapp2.RequestHandler):
+    def get(self):
+
 
 
 class ViewAllWorkers(webapp2.RequestHandler):
@@ -78,20 +88,20 @@ class MapView(webapp2.RequestHandler):
 class CalendarView(webapp2.RequestHandler):
     def get(self):
 
-class AddEvent(webapp2.RequestHandler):
-    def get(self):
+
 
 
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/mapview',MapView),
-    ('/calendarview',CalendarView),
-    ('/addevent',AddEvent),
-    ('/viewOneEvent',ViewOneEvent),
-    ('/viewAllEvents',ViewAllEvents),
-    ('/viewOneWorker',ViewOneWorker),
-    ('/viewAllWorkers',ViewAllWorkers),
-    ('/giveFeedback',GiveFeedback)
+    ('/Mapview',MapView),
+    ('/Calendarview',CalendarView),
+    ('/Addevent',AddEvent),
+    ('/ViewOneEvent',ViewOneEvent),
+    ('/ViewAllEvents',ViewAllEvents),
+    ('/ViewOneWorker',ViewOneWorker),
+    ('/ViewAllWorkers',ViewAllWorkers),
+    ('/GiveFeedback',GiveFeedback),
+    ('/DeleteEvent',DeleteEvent)
 ], debug=True)
 
