@@ -27,19 +27,71 @@ administrator1 = users.User("wenwenzhang1001@gmail.com")
 administrator2 = users.User("")
 
 class Event(ndb.Model):
+    name = ndb.StringProperty(required= True)
+    description = ndb.StringProperty()
+    coverurl=ndb.StringProperty()
+
+    authorID = ndb.StringProperty(default="administrator")
+    author_name = ndb.StringProperty(default="administrator")
+
+    loc = ndb.GeoPtProperty(required=True,default=db.GeoPt(0,0))
+    date = ndb.DateTimeProperty(required=True)
+
+    linkage = ndb.StringProperty()
+
+
+class crowdworker(ndb.Model):
+    ID = ndb.StringProperty()
     name = ndb.StringProperty()
+    rated_times = ndb.IntegerProperty()
+    score = ndb.IntegerProperty()
 
-    authorID = ndb.StringProperty()
-    author_name = ndb.StringProperty()
 
-    
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
+
+class ViewAllEvents(webapp2.RequestHandler):
+    def get(self):
+
+class ViewOneEvent(webapp2.RequestHandler):
+    def get(self):
+
+class GiveFeedback(webapp2.RequestHandler):
+    def get(self):
+
+
+class ViewAllWorkers(webapp2.RequestHandler):
+    def get(self):
+
+class ViewOneWorker(webapp2.RequestHandler):
+    def get(self):
+
+
+
+class MapView(webapp2.RequestHandler):
+    def get(self):
+
+class CalendarView(webapp2.RequestHandler):
+    def get(self):
+
+class AddEvent(webapp2.RequestHandler):
+    def get(self):
+
+
+
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/mapview',MapView),
+    ('/calendarview',CalendarView),
+    ('/addevent',AddEvent),
+    ('/viewOneEvent',ViewOneEvent),
+    ('/viewAllEvents',ViewAllEvents),
+    ('/viewOneWorker',ViewOneWorker),
+    ('/viewAllWorkers',ViewAllWorkers),
+    ('/giveFeedback',GiveFeedback)
 ], debug=True)
 
