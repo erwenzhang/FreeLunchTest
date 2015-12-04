@@ -26,7 +26,7 @@ from google.appengine.api import images
 
 
 administrator1 = users.User("wenwenzhang1001@gmail.com")
-administrator2 = users.User("")
+# administrator2 = users.User("")
 
 class Event(ndb.Model):
     name = ndb.StringProperty(required= True)
@@ -36,11 +36,10 @@ class Event(ndb.Model):
     authorID = ndb.StringProperty(default="administrator")
     author_name = ndb.StringProperty(default="administrator")
 
-    loc = ndb.GeoPtProperty(required=True,default=db.GeoPt(0,0))
+    loc = ndb.GeoPtProperty(required=True,default=ndb.GeoPt(0,0))
     date = ndb.DateTimeProperty(required=True)
 
     linkage = ndb.StringProperty()
-
 
 class Crowdworker(ndb.Model):
     ID = ndb.StringProperty()
@@ -49,59 +48,21 @@ class Crowdworker(ndb.Model):
     score = ndb.IntegerProperty()
 
 
-
-
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
-
-
-class ViewAllEvents(webapp2.RequestHandler):
-    def get(self):
-
-
-class ViewOneEvent(webapp2.RequestHandler):
-    def get(self):
-
-class GiveFeedback(webapp2.RequestHandler):
-    def get(self):
-
-class AddEvent(webapp2.RequestHandler):
-    def get(self):
-
-class DeleteEvent(webapp2.RequestHandler):
-    def get(self):
-
-
-
-class ViewAllWorkers(webapp2.RequestHandler):
-    def get(self):
-
-class ViewOneWorker(webapp2.RequestHandler):
-    def get(self):
-
-
-
-class MapView(webapp2.RequestHandler):
-    def get(self):
-
-class CalendarView(webapp2.RequestHandler):
-    def get(self):
-
-
-
-
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write('Hello, World!')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler),
-    ('/Mapview',MapView),
-    ('/Calendarview',CalendarView),
-    ('/Addevent',AddEvent),
-    ('/ViewOneEvent',ViewOneEvent),
-    ('/ViewAllEvents',ViewAllEvents),
-    ('/ViewOneWorker',ViewOneWorker),
-    ('/ViewAllWorkers',ViewAllWorkers),
-    ('/GiveFeedback',GiveFeedback),
-    ('/DeleteEvent',DeleteEvent)
+    ('/', MainHandler)#,
+    # ('/Mapview',MapView),
+    # ('/Calendarview',CalendarView),
+    # ('/Addevent',AddEvent),
+    # ('/ViewOneEvent',ViewOneEvent),
+    # ('/ViewAllEvents',ViewAllEvents),
+    # ('/ViewOneWorker',ViewOneWorker),
+    # ('/ViewAllWorkers',ViewAllWorkers),
+    # ('/GiveFeedback',GiveFeedback),
+    # ('/DeleteEvent',DeleteEvent)
 ], debug=True)
 
