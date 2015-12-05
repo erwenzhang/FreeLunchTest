@@ -14,7 +14,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Freelunch$Freelunch.coverage" NAME="Freelunch Coverage Results" MODIFIED="1449254538090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Freelunch$Freelunch.coverage" NAME="Freelunch Coverage Results" MODIFIED="1449276762879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -38,10 +38,16 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8369565">
-              <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.3478261">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="51" selection-end-column="33" />
               <folding>
-                <element signature="e#601#615#0" expanded="true" />
+                <element signature="e#598#629#0" expanded="true" />
+                <marker date="1449276811000" expanded="true" signature="2486:2518" placeholder="SELECT * FRO..Event..." />
+                <marker date="1449276811000" expanded="true" signature="2486:2519" placeholder="SELECT * FRO..Event..." />
+                <marker date="1449276811000" expanded="true" signature="2486:2521" placeholder="SELECT * FRO..Event..." />
+                <marker date="1449276811000" expanded="true" signature="2592:2631" placeholder="SELECT * FRO..Crowdworker..." />
+                <marker date="1449276811000" expanded="true" signature="3632:3657" placeholder="SELECT * FRO..Crowdworker..." />
+                <marker date="1449276811000" expanded="true" signature="3632:3673" placeholder="SELECT * FRO..Crowdworker..." />
               </folding>
             </state>
           </provider>
@@ -64,8 +70,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="125" />
-    <option name="y" value="26" />
+    <option name="x" value="12" />
+    <option name="y" value="66" />
     <option name="width" value="1241" />
     <option name="height" value="684" />
   </component>
@@ -352,7 +358,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="125" y="26" width="1241" height="684" extended-state="0" />
+    <frame x="12" y="66" width="1241" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -392,12 +398,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33152175">
+          <caret line="1480" column="0" selection-start-line="1480" selection-start-column="0" selection-end-line="1480" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8369565">
-          <caret line="94" column="31" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.3478261">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="51" selection-end-column="33" />
           <folding>
-            <element signature="e#601#615#0" expanded="true" />
+            <element signature="e#598#629#0" expanded="true" />
+            <marker date="1449276811000" expanded="true" signature="2486:2518" placeholder="SELECT * FRO..Event..." />
+            <marker date="1449276811000" expanded="true" signature="2486:2519" placeholder="SELECT * FRO..Event..." />
+            <marker date="1449276811000" expanded="true" signature="2486:2521" placeholder="SELECT * FRO..Event..." />
+            <marker date="1449276811000" expanded="true" signature="2592:2631" placeholder="SELECT * FRO..Crowdworker..." />
+            <marker date="1449276811000" expanded="true" signature="3632:3657" placeholder="SELECT * FRO..Crowdworker..." />
+            <marker date="1449276811000" expanded="true" signature="3632:3673" placeholder="SELECT * FRO..Crowdworker..." />
           </folding>
         </state>
       </provider>
